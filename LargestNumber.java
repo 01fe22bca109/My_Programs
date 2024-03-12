@@ -1,30 +1,31 @@
 import java.util.Scanner;
 
-public class LargestNumber {
+public class LargestNumber{
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a number to check if it's prime:");
-        int num = scanner.nextInt();
+        int largest = Integer.MIN_VALUE;
 
-        if (isPrime(num)) {
-            System.out.println(num + " is a prime number.");
-        } else {
-            System.out.println(num + " is not a prime number.");
-        }
-    }
+        System.out.println("Enter the first number:");
+        int num1 = scanner.nextInt();
+        largest = Math.max(largest, num1);
 
-    public static boolean isPrime(int num) {
-        if (num <= 1) {
-            return false;
-        }
+        System.out.println("Enter the second number:");
+        int num2 = scanner.nextInt();
+        largest = Math.max(largest, num2);
 
-        for (int i = 2; i <= Math.sqrt(num); i++) {
-            if (num % i == 0) {
-                return false;
-            }
-        }
+        System.out.println("Enter the third number:");
+        int num3 = scanner.nextInt();
+        largest = Math.max(largest, num3);
 
-        return true;
+        System.out.println("Enter the fourth number:");
+        int num4 = scanner.nextInt();
+        largest = Math.max(largest, num4);
+
+        System.out.println("Enter the fifth number:");
+        int num5 = scanner.nextInt();
+        largest = Math.max(largest, num5);
+
+        System.out.println("The largest number among the five numbers is " + largest + ".");
     }
 }
